@@ -1,3 +1,8 @@
+<br />
+<br />
+<br />
+<div class="booyah-box col-3 offset-4">
+
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -9,12 +14,14 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <br />
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, 'Log in', class: 'btn btn-primary' %>
   </div>
 <% end %>
-
+<br />
 <%= render "devise/shared/links" %>
+
+</div>
