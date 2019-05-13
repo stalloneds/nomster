@@ -98,3 +98,18 @@
 
 <% end %>
 
+<div>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :picture %>
+  <%= f.input :caption %>
+  <%= f.submit "Create", class: 'btn btn-primary' %>
+<% end %>
+</div>
+
+<div>
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+<% end %>
+</div>
+
