@@ -32,6 +32,7 @@
     <% if place.photos.last.present? %>
     <div class="float-right">
      <%= image_tag place.photos.last.picture.url, :class => "img" %>
+    <br /><br />
     </div>
     <% end %>
     <h1><%= link_to place.name, place_path(place) %></h1><br />
