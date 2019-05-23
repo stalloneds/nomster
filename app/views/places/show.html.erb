@@ -24,8 +24,9 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
+                  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>                  
                   <div class="modal-body">
-                  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+
                     <div>
                       <%= f.input :picture %>
                       <%= f.input :caption %>
